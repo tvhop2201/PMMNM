@@ -27,11 +27,13 @@ if (isset($_POST['signin'])) {
     }
 
 
-    $_SESSION['username'] = $username;
-    $extra = "../view/welcom.php";
-    $host = $_SERVER['HTTP_HOST'];
-    $uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-    header("location:http://$host$uri/$extra");
-    echo ". <script> alert('Xin chào $username ban da dang nhap thanh cong');</script>";
-    die();
+    
+    
+    $_SESSION['id'] = strval($username) ;
+    $extra = "../view/welcome.php";
+    // $host = $_SERVER['HTTP_HOST'];
+    header("location: ../view/welcome.php");
+    // echo ". <script> alert('Xin chào $username ban da dang nhap thanh cong');</script>";
+    // $uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+    // die();
 }
