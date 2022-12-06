@@ -1,20 +1,19 @@
 <?php 
 include"lib/dbcon.php";
 if(!isset($_SESSION["Id"])){
-                            header("location:index.php");
-                            }
-                            
-                            $sql="SELECT * FROM `motel` INNER JOIN user ON motel.Iduser=user.Iduser";
-                            $query_danhsach=mysqli_query($con,$sql);
+header("location:index.php");
+}
 
-                            ?>
+$sql="SELECT * FROM `motel` INNER JOIN user ON motel.Iduser=user.Iduser";
+$query_danhsach=mysqli_query($con,$sql);
+?>
 <div class="col-xs-12 col-col-md-12 col-sm-12 col-lg-9">
     <div class="content">
         <div class="single-post-new">
             <div class="content-single-news">
                 <h3>Danh sách bài viết</h3>
                 <article class="post-content">
-                    <div class="form-dat-bai">
+                    <div class="form-dat-bai">  
                         <table class="table table-hover table-border" id="list-post">
                             <thead>
                                 <th>Mã tin</th>
@@ -23,8 +22,7 @@ if(!isset($_SESSION["Id"])){
                                 <th>Người đăng</th>
                                 <th>Ngày đăng</th>
                                 <th>Tin hot</th>
-                                <th>Tác vụ</th>
-                                
+                                <th>Tác vụ</th>   
                             </thead>
                             <tbody>
                             <?php while($row_danhsach=mysqli_fetch_array($query_danhsach)){

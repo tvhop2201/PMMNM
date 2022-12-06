@@ -4,8 +4,6 @@ include"lib/dbcon.php";
     order by Idtin desc LIMIT 0,10
     " ;   
     $query_tinmoi= mysqli_query($con,$sql);
-
-
 ?>  
 <!-- start-content-left -->
 <div class="col-xs-12 col-col-md-12 col-sm-12 col-lg-9">
@@ -20,13 +18,11 @@ include"lib/dbcon.php";
                 <div class="tab-pane i-container active" id="new">
                     <div class="list-reals">
                         <!-- thong-tin -->
-
-                        <?php 
-                                                    
-                                                    while($row_muoitinmoi =mysqli_fetch_array($query_tinmoi)){
+                        <?php                         
+                            while($row_muoitinmoi =mysqli_fetch_array($query_tinmoi)){
                         ?>
                         <div class="detail-list">
-                            <a href="index.php?p=chitiettin">
+                            <a href="index.php?p=chitiettin"></a>
                                 <img src="../image/info/<?php echo $row_muoitinmoi['Anh'] ?>" >
                             </a>
                             <div class="info-real">

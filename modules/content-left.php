@@ -25,11 +25,10 @@ include"lib/dbcon.php";
                                             <div class="list-reals">
                                                 <!-- thong-tin -->
                                                 <?php 
-                                                    
                                                     while($row_namtinmoi =mysqli_fetch_array($query)){
                                                 ?>
                                                 <div class="detail-list">
-                                                    <a href="index.php?p=chitiettin&idtin=<?php echo $row_namtinmoi['I  dtin'] ?>">
+                                                    <a href="index.php?p=chitiettin&idtin=<?php echo $row_namtinmoi['Idtin'] ?>">
                                                         <img src="../image/info/<?php echo $row_namtinmoi['Anh'] ?>" alt="">
                                                     </a>
                                                     <div class="info-real">
@@ -43,19 +42,17 @@ include"lib/dbcon.php";
                                                             <div class="row">
                                                                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                                     <p>
-                                                                        <i class="fa fa-usd">  </i> Giá:
+                                                                        <i class="fa fa-usd"></i> Giá:
                                                                         <strong><?php echo $row_namtinmoi['Gia'] ?>đ/ Tháng</strong>
                                                                     </p>
                                                                 </div>
-                                                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                                <div class="col-xs-5 col-sm-5 col-md-6 col-lg-6">
                                                                     <p>
-                                                                        <i class="fa fa-map-o">
-                                                                                    
-                                                                                    
-                                                                                </i> Diện tích:
+                                                                        <i class="fa fa-map-o"> 
+                                                                        </i> Diện tích:
                                                                         <strong><?php echo $row_namtinmoi['Dientich'] ?>m
-                                                                                        <sup>2</sup>
-                                                                                    </strong>
+                                                                            <sup>2</sup>
+                                                                        </strong>
                                                                     </p>
                                                                 </div>
                                                             </div>

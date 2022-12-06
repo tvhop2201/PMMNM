@@ -303,6 +303,7 @@ button.submit-form {
     background: #fff4f1;
     margin-bottom: 10px;
     min-height: 168px;
+    width: 500px;
     border: 1px solid #fff;
 }
 

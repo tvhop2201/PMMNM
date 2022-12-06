@@ -1,6 +1,6 @@
 <?php 
 if(!isset($_SESSION["Id"])){
-                            header("location:index.php?p=dangnhap");
+    header("location:index.php?p=dangnhap");
 }
 $id=($_SESSION["Id"]);
 settype($id,"int");

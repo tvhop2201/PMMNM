@@ -17,7 +17,6 @@ $query=mysqli_query($con,$sql);
                             
                             <?php while($row_tinhot=mysqli_fetch_array($query))
                             {
-                            
                             ?>
                             <div class="col-sm-12 col-md-6 col-xs-12 col-lg-6">
                                 <div class="detail-list">
@@ -30,7 +29,7 @@ $query=mysqli_query($con,$sql);
                                     <div class="info-real">
                                         <h4><a href="index.php?p=chitiettin&idtin=<?php echo $row_tinhot['Idtin'] ?>"><?php echo $row_tinhot['Tieude'] ?></a></h4>
                                         <p>
-                                            <i class="fa fa-usd">  </i> Giá:
+                                            <i class="fa fa-usd"> </i> Giá:
                                             <strong><?php echo $row_tinhot['Gia'] ?>đ/ Tháng</strong>
                                         </p>
 

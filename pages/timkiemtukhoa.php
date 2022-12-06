@@ -1,17 +1,8 @@
 <?php 
 include"lib/dbcon.php";
         $ten=$_GET["ten"];
-        
-        
-        
-        
-        $query="SELECT * FROM motel INNER JOIN ward on motel.Idphuong=ward.Idphuong WHERE Tieude LIKE '%$ten%'        ";
+        $query="SELECT * FROM motel INNER JOIN ward on motel.Idphuong=ward.Idphuong WHERE Tieude LIKE '%$ten%'";
         $query_timkiem=mysqli_query($con,$query);
-        
-        
-        
-
-
 ?>
 
 <!-- start-content-left -->
@@ -21,21 +12,18 @@ include"lib/dbcon.php";
             <ul class="nav nav-tabs">
                 <li class="nav-item">
                     <a href="index.php?p=tintheoloai&loaitin=1" class="nav-link active">Tìm kiếm</a>
-                </li>
-                
+                </li>  
             </ul>
             <div class="tab-content">
                 <div class="tab-pane i-container active" id="new">
                     <div class="list-reals">
                         <!-- thong-tin -->
-
-                        <?php 
-                                                    
-                        while($row_timkiem =mysqli_fetch_array($query_timkiem)){
+                        <?php                        
+                            while($row_timkiem =mysqli_fetch_array($query_timkiem)){
                         ?>
                         <div class="detail-list">
                             <a href="index.php?p=chitiettin">
-                                <img src="../image/info/<?php echo $row_timkiem['Anh'] ?>" >
+                                <img src="../age/info/<?php echo $row_timkiem['Anh'] ?>" >
                             </a>
                             <div class="info-real">
                                 <h4>
@@ -54,13 +42,12 @@ include"lib/dbcon.php";
                                         </div>
                                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                             <p>
-                                                <i class="fa fa-map-o">
-                                                                                    
-                                                                                    
-                                                                                </i> Diện tích:
-                                                <strong><?php echo $row_timkiem['Dientich'] ?>m
-                                                                                        <sup>2</sup>
-                                                                                    </strong>
+                                                <i class="fa fa-map-o"></i>
+                                                 Diện tích:
+                                                <strong>
+                                                    <?php echo $row_timkiem['Dientich'] ?>
+                                                    m<sup>2</sup>
+                                                </strong>
                                             </p>
                                         </div>
                                     </div>
@@ -68,9 +55,9 @@ include"lib/dbcon.php";
                                 <p>
                                     <i class="fa fa-map-marker"></i>
                                     <span>
-                                                                Khu vực
-                                                                <strong><?php echo $row_timkiem['Tenphuong'] ?></strong>
-                                                            </span>
+                                        Khu vực
+                                        <strong><?php echo $row_timkiem['Tenphuong'] ?></strong>
+                                    </span>
                                     <span class="date-right"><?php echo $row_timkiem['Ngaydang'] ?></span>
                                 </p>
                             </div>
@@ -78,9 +65,8 @@ include"lib/dbcon.php";
                         </div>
                         <!-- end-thongtin -->
                         
-                                                    <?php }?>
-
-
+                        <?php 
+                    }?>
                     </div>
                     <div class="more">
                         <a href="#">Xem tất cả</a>
