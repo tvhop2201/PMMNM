@@ -29,7 +29,7 @@ include"lib/dbcon.php";
                                                 ?>
                                                 <div class="detail-list">
                                                     <a href="index.php?p=chitiettin&idtin=<?php echo $row_namtinmoi['Idtin'] ?>">
-                                                        <img src="../image/info/<?php echo $row_namtinmoi['Anh'] ?>" alt="">
+                                                        <img src="./image/info/<?php echo $row_namtinmoi['Anh'] ?>" alt="">
                                                     </a>
                                                     <div class="info-real">
                                                         <h4>

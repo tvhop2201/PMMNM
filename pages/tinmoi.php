@@ -23,7 +23,7 @@ include"lib/dbcon.php";
                         ?>
                         <div class="detail-list">
                             <a href="index.php?p=chitiettin"></a>
-                                <img src="../image/info/<?php echo $row_muoitinmoi['Anh'] ?>" >
+                                <img src="./image/info/<?php echo $row_muoitinmoi['Anh'] ?>" >
                             </a>
                             <div class="info-real">
                                 <h4>

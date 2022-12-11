@@ -7,5 +7,5 @@ include"../lib/dbcon.php";
         mysqli_query($con,$query1);
        $query2="DELETE FROM motel WHERE motel.Idtin = $idtin" ;
        mysqli_query($con,$query2);
-       header("location: ../index.php?p=danhsachbaidang");
+       header("location: ../index.php?p=qlbd");
 }?> 

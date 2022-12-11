@@ -20,7 +20,7 @@ function random_name(){
 //////////////////////////////
 if(isset($_POST["btn_submit"])){
     $name=random_name().$_FILES["avatar"]["name"];
-    move_uploaded_file($_FILES["avatar"]["tmp_name"],"../age/info/$name");
+    move_uploaded_file($_FILES["avatar"]["tmp_name"],"../image/info/$name");
     $tieude=$_POST["tieude"];
     $noidung=$_POST["noidung"];
     $dientich=$_POST["dientich"];settype($dientich,"int");
@@ -54,6 +54,6 @@ if(isset($_POST["btn_submit"])){
         mysqli_query($con,$themanh);
     }
 
-    header('location:../index.php?p=danhsachbaidang');
+    header('location:../index.php?p=qlbd');
 }    
 ?>

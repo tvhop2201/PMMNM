@@ -49,11 +49,10 @@ $query_danhsach=mysqli_query($con,$sql);
                                     <?php echo $row_danhsach['Tinhot'] ?>
                                     </td>
                                     <td>
-                                        <a href="user/xulyxoabai.php?d=<?php echo $row_danhsach['Idtin'] ?>">Xóa</a>
+                                        <a href="admin/xoabaidang.php?d=<?php echo $row_danhsach['Idtin'] ?>">Xóa</a>
                                         <a href="admin/tinhot.php?d=<?php echo $row_danhsach['Idtin'] ?>&&t=<?php echo $row_danhsach['Tinhot'] ?>">Tinhot</a>
                                     </td>
-                                    
-                                    
+
                                 </tr>
                             <?php }?>
                                 

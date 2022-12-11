@@ -1,14 +1,13 @@
 <?php 
 include"lib/dbcon.php";
 if(!isset($_SESSION["Id"])){
-                            header("location:index.php");
-                            }
-                            $id=($_SESSION["Id"]);
-                            settype($id,"int");
-                            $sql="SELECT * FROM motel WHERE Iduser=$id";
-                            $query_danhsach=mysqli_query($con,$sql);
-
-                            ?>
+    header("location:index.php");
+    }
+    $id=($_SESSION["Id"]);
+    settype($id,"int");
+    $sql="SELECT * FROM motel WHERE Iduser=$id";
+    $query_danhsach=mysqli_query($con,$sql);
+?>
 <div class="col-xs-12 col-col-md-12 col-sm-12 col-lg-9">
     <div class="content">
         <div class="single-post-new">
@@ -25,22 +24,21 @@ if(!isset($_SESSION["Id"])){
                             </thead>
                             <tbody>
                             <?php while($row_danhsach=mysqli_fetch_array($query_danhsach)){
-                                
-                                ?>
+                            ?>
                             
                             
-                                <tr>
-                                    <td><?php echo $row_danhsach['Idtin'] ?></td>
-                                    <td><a href="index.php?p=chitiettin&idtin=<?php echo $row_danhsach['Idtin'] ?>"><?php echo $row_danhsach['Tieude'] ?></a></td>
-                                    <td><?php echo $row_danhsach['Ngaydang'] ?></td>
-                                    <td>
-                                        <a href="index.php?p=suabai&idtin=<?php echo $row_danhsach['Idtin'] ?>">Sửa</a> |
-                                        <a href="user/xulyxoabai.php?d=<?php echo $row_danhsach['Idtin'] ?>">Xóa</a>
-                                    </td>
-                                    
-                                </tr>
-                                <?php }?>
+                            <tr>
+                                <td><?php echo $row_danhsach['Idtin'] ?></td>
+                                <td><a href="index.php?p=chitiettin&idtin=<?php echo $row_danhsach['Idtin'] ?>"><?php echo $row_danhsach['Tieude'] ?></a></td>
+                                <td><?php echo $row_danhsach['Ngaydang'] ?></td>
+                                <td>
+                                    <a href="index.php?p=suabai&idtin=<?php echo $row_danhsach['Idtin'] ?>">Sửa</a> |
+                                    <a href="user/xulyxoabai.php?d=<?php echo $row_danhsach['Idtin'] ?>">Xóa</a>
+                                </td>
                                 
+                            </tr>
+                            <?php }?>
+                            
                             </tbody>
                         </table>
                     </div>

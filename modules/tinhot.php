@@ -22,7 +22,11 @@ $query=mysqli_query($con,$sql);
                                 <div class="detail-list">
                                     <div class="img-bds">
                                         <a href="index.php?p=chitiettin&idtin=<?php echo $row_tinhot['Idtin'] ?>">
-                                            <img src="../image/info/<?php echo $row_tinhot['Anh'] ?>" alt="">
+                                            <h1>hoànaajj</h1>
+                                            <!-- <img src="../image/info/<?php echo $row_tinhot['Anh'] ?>" alt=""> -->
+                                            <img src="./image/info/AK5wyUKaSqbinh.jpg" alt="">
+                                           
+
                                         </a>
                                         <span>HOT</span>
                                     </div>
