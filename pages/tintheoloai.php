@@ -40,7 +40,7 @@ else{
                         ?>
                         <div class="detail-list">
                             <a href="index.php?p=chitiettin">
-                                <img src="../image/info/<?php echo $row_tintheoloai['Anh'] ?>" >
+                                <img src="./image/info/<?php echo $row_tintheoloai['Anh'] ?>" >
                             </a>
                             <div class="info-real">
                                 <h4>

@@ -29,8 +29,9 @@ include"lib/dbcon.php";
                                                     while($row_namtinmoi =mysqli_fetch_array($query)){
                                                 ?>
                                                 <div class="detail-list">
-                                                    <a href="index.php?p=chitiettin&idtin=<?php echo $row_namtinmoi['I  dtin'] ?>">
-                                                        <img src="../image/info/<?php echo $row_namtinmoi['Anh'] ?>" alt="">
+                                                    <span><?php echo $row_namtinmoi['Anh']?></span>
+                                                    <a href="index.php?p=chitiettin&idtin=<?php echo $row_namtinmoi['Idtin'] ?>">
+                                                        <img src="./image/info/<?php echo $row_namtinmoi['Anh'] ?>" alt="">
                                                     </a>
                                                     <div class="info-real">
                                                         <h4>
