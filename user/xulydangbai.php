@@ -46,7 +46,7 @@ if(isset($_POST["btn_submit"])){
         $image_name=random_name().$_FILES['hinh']['name'][$key];
         $tmp_name=$_FILES['hinh']['tmp_name'][$key];
 
-        $target_dir="../age/info/$name";
+        $target_dir="../image/info/";
         $target_file=$target_dir.$image_name;
         move_uploaded_file($tmp_name,$target_file);
         
