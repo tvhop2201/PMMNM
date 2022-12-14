@@ -1,6 +1,11 @@
 <?php 
 include"lib/dbcon.php";
 if(isset($_POST["submit"])){
+    $captcha = $_POST["g-recaptcha-response"];
+    if(!$captcha){
+        echo "<script>alert('Xác thực thất bại :) !!!')</script>";
+        header("Refresh:0");
+    }
     $tendangnhap=$_POST["tendangnhap"];
     $hoten=$_POST["hoten"];
     $sdt=$_POST["sdt"];settype($sdt,"int");
@@ -65,6 +70,8 @@ alert(message);</script>
                                                     </label>
                                                     <input type="password" name="pw" id="user_pass" class="input" value size="20">
                                                 </div>
+
+                                                <div class="g-recaptcha" data-sitekey="6LeZgHsjAAAAAHuVKJxli8rGVOH-SWyTCeaUru-3"></div>
                                                 
                                                 <div class="form-group">
                                                     <button type="submit" name="submit" class="btn btn-primary">Đăng kí</button>

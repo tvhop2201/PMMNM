@@ -100,7 +100,9 @@ if(isset($_GET["p"]))
             <script src="js/bootstrap.min.js"></script>
             <script src="js/jquery-3.4.1.min.js"></script>
             <script src="js/js.js"></script>
+            <script src="https://www.google.com/recaptcha/api.js"></script>
     </div>
+    
 
 </body>
 

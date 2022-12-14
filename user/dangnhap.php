@@ -2,7 +2,13 @@
 
 <?php //kiem tra dang nhap
 include"lib/dbcon.php";
+
 if(isset($_POST["submit"])){
+    $captcha = $_POST["g-recaptcha-response"];
+    if(!$captcha){
+        echo "<script>alert('Xác thực thất bại :) !!!')</script>";
+        header("Refresh:0");
+    }
     $un=$_POST["log"];
     $pw=$_POST["pw"];
     $pw=md5($pw);
@@ -36,6 +42,7 @@ if(isset($_POST["submit"])){
                                                         <label for="user-pass">Mật khẩu</label>
                                                         <input type="password" name="pw" id="user_pass" class="input" value size="20">
                                                     </p>
+                                                    <div class="g-recaptcha" data-sitekey="6LeZgHsjAAAAAHuVKJxli8rGVOH-SWyTCeaUru-3"></div>
 
                                                     <p class="login-submit">
                                                         <input type="submit" name="submit" id="submit" class="button button-primary" value="Đăng nhập">
