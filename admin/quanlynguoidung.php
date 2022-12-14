@@ -1,7 +1,8 @@
 
 <?php 
 include"lib/dbcon.php";
-if(!isset($_SESSION["Id"])){
+if(!isset($_SESSION["Id"])){ // sử dụng biến toàn cầu $_sesion để kiểm soát quyền truy cập
+    // bằng chức năng login, isset hàm khởi tạo
                             header("location:index.php");
                             }
                             
