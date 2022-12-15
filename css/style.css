@@ -57,7 +57,7 @@ header .main-header .top-menu {
 }
 
 header .main-header .top-menu ul {
-    text-align: center;
+    text-align: right;
 }
 
 header .main-header .top-menu ul li {
@@ -478,8 +478,8 @@ span.date-right {
 }
 
 footer .content-footer {
-    background: #fff url(../image/skyline-bg.png) no-repeat!important;
-    padding-top: 150px!important;
+    background: #fff url(../image/skyline-bg.png) no-repeat !important;
+    padding-top: 150px !important;
     position: relative;
     padding-bottom: 0;
 }
